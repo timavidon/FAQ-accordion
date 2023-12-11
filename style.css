@@ -16,7 +16,7 @@
   --fs-regular: 1rem;
   --fs-semi-bold: 1.15rem;
   --fs-bold-mobile: 2.4rem;
-  --fs-bold-desktop: 3rem;
+  --fs-bold-desktop: 3.5rem;
 
   /* Font weights */
   --fw-regular: 400;
@@ -63,18 +63,18 @@ body {
 
 .container {
   position: relative;
-  width: min(45ch, 100% - 4rem);
-  padding: 2rem;
+  width: min(70ch, 100% - 4rem);
+  padding: 2.5rem;
   margin-inline: auto;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   color: var(--dark-purple);
   background-color: var(--white);
   z-index: 1;
-  top: -7rem;
+  top: -8.8rem;
 }
 
 .header {
-  margin-left: 1.2rem;
+  margin-left: 1.5rem;
   font-size: var(--fs-bold-mobile);
 }
 
@@ -84,15 +84,18 @@ body {
 
 .accordion-header {
   width: 100%;
-  text-align: left;
-  font-size: var(--fs-semi-bold);
   padding-block: 1.5rem;
-  color: hsl(var(--dark-purple-value), 0.9);
   cursor: pointer;
   border: none;
   background-color: transparent;
-
   justify-content: space-between;
+}
+
+.accordion-question {
+  text-align: left;
+  font-size: 2vw;
+  font-weight: var(--fw-semi-bold);
+  color: var(--dark-purple);
 }
 
 .accordian-item:not(:last-child) {
@@ -106,6 +109,11 @@ body {
 .accordion-panel {
   padding-bottom: 1.5rem;
   color: var(--grayish-purple);
+}
+
+.accordion-icon {
+  width: 5vw;
+  height: 5.1vw;
 }
 
 .attribution {
@@ -135,6 +143,15 @@ body {
   }
 
   .star-icon {
+    width: 2.7rem;
+    height: 2.8rem;
+  }
+
+  .accordion-question {
+    font-size: var(--fs-semi-bold);
+  }
+
+  .accordion-icon {
     width: 2.1rem;
     height: 2.2rem;
   }
