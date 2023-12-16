@@ -20,39 +20,39 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+
+    <!-- 
+      Hide the menu during the 'no-js' state
+      to solve (CLS) Cumulative Layout Shift 
+    -->
+    <style>
+      [data-state="no-js"] .accordion-panel {
+        display: none;
+      }
+    </style>
   </head>
   <body>
-    <picture class="bg-pic">
-      <source
-        class="bg-pic-desktop"
-        media="(min-width: 45em)"
-        srcset="./assets/images/background-pattern-desktop.svg"
-      />
-      <img
-        class="bg-pic-mobile"
-        src="./assets/images/background-pattern-mobile.svg"
-        alt="background-pattern"
-      />
-    </picture>
     <main class="container">
       <header class="flex-row">
         <svg
-          class="star-icon"
           xmlns="http://www.w3.org/2000/svg"
-          width="1.8rem"
-          height="1.9rem"
+          width="40"
+          height="41"
           fill="none"
           viewBox="0 0 40 41"
+          aria-hidden="true"
         >
           <path
             fill="#AD28EB"
             d="M37.5 20.5a2.467 2.467 0 0 1-1.64 2.344l-9.913 3.604-3.603 9.911a2.5 2.5 0 0 1-4.688 0l-3.604-9.922-9.911-3.593a2.5 2.5 0 0 1 0-4.688l9.921-3.604 3.594-9.911a2.5 2.5 0 0 1 4.688 0l3.604 9.921 9.911 3.594A2.467 2.467 0 0 1 37.5 20.5Z"
           />
         </svg>
-        <h1 class="header">FAQs</h1>
+        <h1 class="heading">
+          <abbr title="Freqeunt asked questions">FAQs</abbr>
+        </h1>
       </header>
 
-      <div class="accordion">
+      <div class="accordion data-state="no-js">
         <div class="accordian-item">
           <!-- Header -->
           <h2>
@@ -61,24 +61,10 @@
               id="accordion-header-1"
               aria-controls="accordion-panel-1"
               aria-expanded="false"
+              disabled
+              title="This button becomes functional once JavaScript is active"
             >
-              <span class="accordion-question"
-                >What is Frontend Mentor, and how will it help me?</span
-              >
-              <svg
-                class="accordion-icon"
-                xmlns="http://www.w3.org/2000/svg"
-                width="1.9rem"
-                height="2rem"
-                fill="none"
-                viewBox="0 0 30 31"
-                aria-hidden="true"
-              >
-                <path
-                  fill="#AD28EB"
-                  d="M15 3.313A12.187 12.187 0 1 0 27.188 15.5 12.203 12.203 0 0 0 15 3.312Zm4.688 13.124h-3.75v3.75a.938.938 0 0 1-1.876 0v-3.75h-3.75a.938.938 0 0 1 0-1.875h3.75v-3.75a.938.938 0 0 1 1.876 0v3.75h3.75a.938.938 0 0 1 0 1.876Z"
-                />
-              </svg>
+              What is Frontend Mentor, and how will it help me?
             </button>
           </h2>
           <!-- Panel -->
@@ -105,21 +91,7 @@
               aria-controls="accordion-panel-2"
               aria-expanded="false"
             >
-              <span class="accordion-question">Is Frontend Mentor free?</span>
-              <svg
-                class="accordion-icon"
-                xmlns="http://www.w3.org/2000/svg"
-                width="1.9rem"
-                height="2rem"
-                fill="none"
-                viewBox="0 0 30 31"
-                aria-hidden="true"
-              >
-                <path
-                  fill="#AD28EB"
-                  d="M15 3.313A12.187 12.187 0 1 0 27.188 15.5 12.203 12.203 0 0 0 15 3.312Zm4.688 13.124h-3.75v3.75a.938.938 0 0 1-1.876 0v-3.75h-3.75a.938.938 0 0 1 0-1.875h3.75v-3.75a.938.938 0 0 1 1.876 0v3.75h3.75a.938.938 0 0 1 0 1.876Z"
-                />
-              </svg>
+              Is Frontend Mentor free?
             </button>
           </h2>
           <section
@@ -144,23 +116,7 @@
               aria-controls="accordion-panel-3"
               aria-expanded="false"
             >
-              <span class="accordion-question"
-                >Can I use Frontend Mentor projects in my portfolio?</span
-              >
-              <svg
-                class="accordion-icon"
-                xmlns="http://www.w3.org/2000/svg"
-                width="1.9rem"
-                height="2rem"
-                fill="none"
-                viewBox="0 0 30 31"
-                aria-hidden="true"
-              >
-                <path
-                  fill="#AD28EB"
-                  d="M15 3.313A12.187 12.187 0 1 0 27.188 15.5 12.203 12.203 0 0 0 15 3.312Zm4.688 13.124h-3.75v3.75a.938.938 0 0 1-1.876 0v-3.75h-3.75a.938.938 0 0 1 0-1.875h3.75v-3.75a.938.938 0 0 1 1.876 0v3.75h3.75a.938.938 0 0 1 0 1.876Z"
-                />
-              </svg>
+              Can I use Frontend Mentor projects in my portfolio?
             </button>
           </h2>
           <section
@@ -185,24 +141,7 @@
               aria-controls="accordion-panel-4"
               aria-expanded="false"
             >
-              <span class="accordion-question"
-                >How can I get help if I'm stuck on a Frontend Mentor
-                challenge?</span
-              >
-              <svg
-                class="accordion-icon"
-                xmlns="http://www.w3.org/2000/svg"
-                width="1.9rem"
-                height="2rem"
-                fill="none"
-                viewBox="0 0 30 31"
-                aria-hidden="true"
-              >
-                <path
-                  fill="#AD28EB"
-                  d="M15 3.313A12.187 12.187 0 1 0 27.188 15.5 12.203 12.203 0 0 0 15 3.312Zm4.688 13.124h-3.75v3.75a.938.938 0 0 1-1.876 0v-3.75h-3.75a.938.938 0 0 1 0-1.875h3.75v-3.75a.938.938 0 0 1 1.876 0v3.75h3.75a.938.938 0 0 1 0 1.876Z"
-                />
-              </svg>
+              How can I get help if I'm stuck on a challenge?
             </button>
           </h2>
           <section
@@ -230,6 +169,14 @@
         <a href="https://github.com/timavidon" target="_blank">Tim Avidon</a>.
       </small>
     </footer>
+    <noscript>
+      <!-- Show all content if no JS -->
+      <style>
+        [data-state="no-js"] .accordion-panel {
+          display: block;
+        }
+      </style>
+    </noscript>
     <script src="script.js"></script>
   </body>
 </html>
